@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../css/globals.css";
+import Header from "@/components/Header/Header";
 
 
 
@@ -16,11 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className='antialiased'
-      >
-        {children}
-      </body>
+    <body
+      className='antialiased w-screen w-max-[1440px] min-h-screen h-full flex flex-col mx-auto px-6 bg-background_auth bg-center bg-no-repeat bg-cover'
+    >
+    <Header/>
+
+    {children}
+    </body>
     </html>
-  );
+);
 }
